@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  background: url('img/fondoproy.gif') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.proyectos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.columna-proyecto {
+  max-width: 600px;
+  width: 100%;
+}
+
+.descripcion-fotos {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.pixel-glitch-verde {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  animation: glitch-fire-verde 2s infinite;
+}
+
+@keyframes glitch-fire-verde {
+  0%, 100% { color: #00ff66; text-shadow: 0 0 6px #00ff66; }
+  33%  { color: #66ffcc; text-shadow: 0 0 6px #66ffcc; }
+  66%  { color: #33ff99; text-shadow: 0 0 6px #33ff99; }
+}
+
+.galeria-container {
+    position: relative;
+    background: #0d0f1a;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66 inset;
+    padding: 1rem;
+    max-width: 400px;
+    margin: 2rem auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.proyectos-bloque {
+  background: linear-gradient(-45deg, #177514, #0fff23, #a0fc7c, #1c4412);
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  animation: levitarFND 5s ease-in-out infinite, slideBackground 2s ease infinite;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  margin: 3rem auto;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.proyectos-bloque span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+/* SLIDES PARA FOTOS DEL PROYECTO*/
+#slide1-1:checked ~ .slides .s1-1,
+#slide1-2:checked ~ .slides .s1-2,
+#slide1-3:checked ~ .slides .s1-3,
+#slide1-4:checked ~ .slides .s1-4,
+#slide1-5:checked ~ .slides .s1-5,
+#slide1-6:checked ~ .slides .s1-6 {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+#slide2-1:checked ~ .slides .s2-1,
+#slide2-2:checked ~ .slides .s2-2,
+#slide2-3:checked ~ .slides .s2-3,
+#slide2-4:checked ~ .slides .s2-4,
+#slide2-5:checked ~ .slides .s2-5,
+#slide2-6:checked ~ .slides .s2-6 {
+  opacity: 1;
+  z-index: 1;
+}
+
+.navigation-manual {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.manual-btn {
+  border: 2px solid #00ff66;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.manual-btn:hover {
+  background: #00ff66;
+}
+
+@media (max-width: 768px) {
+  .slides {
+    height: 200px;
+  }
+}
+
+@keyframes levitarFND {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes slideBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

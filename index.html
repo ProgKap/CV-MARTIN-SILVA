@@ -147,39 +147,36 @@
     </div>
   </div>
 
-  <!-- MUSICA-->
-  <button id="btn-musica" onclick="toggleMusica()">🎵 </button>
+    <!-- MUSICA -->
+    <button id="btn-musica" onclick="toggleMusica()">🎵 </button>
 
-  <audio id="musicaFondo" preload="auto">
-    <source src="musica/musicaCV.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
-  
-  <script>
-    let reproduciendo = false;
-  
-  function toggleMusica() {
-        const audio = document.getElementById('musicaFondo');
-        const boton = document.getElementById('btn-musica');
-        audio.volume = 0.3;
-  
-  if (!reproduciendo) {
-    audio.currentTime = 20;
-    audio.play().then(() => {
-      boton.textContent = '⏸️ Pausar Música';
-      boton.classList.add('activo');
-    }).catch(error => {
-      console.error('Error al intentar reproducir la música:', error);
-    });
-  } else {
-    audio.pause();
-    boton.textContent = '🎵 Play Música';
-    boton.classList.remove('activo');
-  }
-  
-  reproduciendo = !reproduciendo;
-}
-  </script>
+    <audio id="musicaFondo" preload="auto">
+      <source src="musica/musicaCV.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+      const audio = document.getElementById('musicaFondo');
+      const boton = document.getElementById('btn-musica');
+
+      let reproduciendo = false;
+
+      function toggleMusica() {
+        if (!reproduciendo) {
+          audio.currentTime = 20;
+          audio.volume = 0.3;
+          audio.play();
+          boton.textContent = '⏸️ Pausar Música';
+          boton.classList.add('activo');
+          reproduciendo = true;
+        } else {
+          audio.pause();
+          boton.textContent = '🎵 Play Música';
+          boton.classList.remove('activo');
+          reproduciendo = false;
+        }
+      }
+    </script>
 
 </body>
 </html>

@@ -7,7 +7,8 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
-  background-color: #000;
+  background: url('img/fondoindex.gif') center center / cover no-repeat fixed;
+  background-blend-mode: overlay; 
 }
 
 html {
@@ -31,14 +32,10 @@ html {
   gap: 2rem;
   margin-top: 2rem;
   padding: 2rem;
-
-  background-image: url('img/img_fondo.jpg');
   background-size: 200% auto; 
   background-position: 0% center;
   background-repeat: no-repeat;
-  animation: fondoMover 40s easoe-in-out infinite;
 }
-
 
 .foto-perfil {
   width: 500px;
@@ -226,6 +223,18 @@ html {
   animation: moverTexto 10s linear infinite;
 }
 
+.cambiar .texto {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.cambiar .texto::before {
+  content: attr(data-texto1);
+  animation: cambioTexto 6s infinite;
+  display: block;
+}
+
 
 /* Animaciones */
 
@@ -290,12 +299,17 @@ html {
   }
 }
 
-@keyframes fondoMover {
-  0%   { background-position: 0% center; }
-  50%  { background-position: 100% center; }
-  100% { background-position: 0% center; }
+@keyframes cambioTexto {
+  0%, 45% {
+    content: attr(data-texto1);
+  }
+  50%, 95% {
+    content: attr(data-texto2);
+  }
+  100% {
+    content: attr(data-texto1);
+  }
 }
-
 
 /*Ajustes Responsive*/
 @media (max-width: 768px) {
@@ -341,4 +355,35 @@ html {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+}
+
+
+/* MUSIQUITA*/
+
+#btn-musica {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(90deg, #00ff99, #0066ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+#btn-musica:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(90deg, #0066ff, #00ff99);
+}
+
+#btn-musica.activo {
+  background: linear-gradient(90deg, #ff6600, #ffcc00);
+  box-shadow: 0 0 20px #ffcc00, 0 0 30px #ff6600;
+  transform: scale(1.2) rotate(2deg);
 }

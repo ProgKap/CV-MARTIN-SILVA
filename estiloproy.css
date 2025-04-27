@@ -111,8 +111,14 @@ input[type="radio"] {
   white-space: nowrap;
 }
 
+.proyectos-bloque:hover {
+  transform: scale(1.05) rotate(-1deg);
+  background-position: 100% 50%;
+  box-shadow: 0 12px 30px rgba(0, 255, 100, 0.7);
+}
 
-/* SLIDES PARA FOTOS DEL PROYECTO*/
+
+/* SLIDES y INTERACCION BOTONES */
 #slide1-1:checked ~ .slides .s1-1,
 #slide1-2:checked ~ .slides .s1-2,
 #slide1-3:checked ~ .slides .s1-3,
@@ -130,6 +136,29 @@ input[type="radio"] {
 #slide2-4:checked ~ .slides .s2-4,
 #slide2-5:checked ~ .slides .s2-5,
 #slide2-6:checked ~ .slides .s2-6 {
+  opacity: 1;
+  z-index: 1;
+}
+
+#slide3-1:checked ~ .slides .s3-1,
+#slide3-2:checked ~ .slides .s3-2,
+#slide3-3:checked ~ .slides .s3-3,
+#slide3-4:checked ~ .slides .s3-4,
+#slide3-5:checked ~ .slides .s3-5,
+#slide3-6:checked ~ .slides .s3-6 {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+#slide4-1:checked ~ .slides .s4-1,
+#slide4-2:checked ~ .slides .s4-2,
+#slide4-3:checked ~ .slides .s4-3 {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slides .slide:first-child {
   opacity: 1;
   z-index: 1;
 }
@@ -153,9 +182,22 @@ input[type="radio"] {
   background: #00ff66;
 }
 
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .slides {
-    height: 200px;
+    height: 180px;
+  }
+
+  .proyectos-bloque {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
   }
 }
 

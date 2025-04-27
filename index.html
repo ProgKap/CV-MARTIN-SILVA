@@ -15,9 +15,38 @@
         <h1 class="pixel-glitch">Martín Alejandro Silva Salinas</h1>
         <h2><span class="pixel-glitch">Desarrollador Back-End</span></h2>
         <div class="contacto-horizontal">
-          <div class="contacto-item"><i class="fas fa-envelope animated-icon"></i> msilvasa@utem.cl</div>
-          <div class="contacto-item"><i class="fas fa-map-marker-alt animated-icon"></i> Santiago, Chile</div>
-          <div class="contacto-item"><i class="fas fa-phone animated-icon"></i> +56 9 3412 1222</div>
+
+          <!-- Contacto básico -->
+        <div class="contacto-horizontal">
+          
+          <a href="https://wa.me/56934121222" target="_blank" class="contacto-item cambiar">
+            <i class="fas fa-phone animated-icon"></i> 
+            <span class="texto" data-texto1="+56 9 3412 1222" data-texto2="Contáctame :3"></span>
+          </a>
+
+          <div class="contacto-item">
+            <i class="fas fa-envelope animated-icon"></i> 
+            msilvasa@utem.cl
+          </div>
+
+          <div class="contacto-item">
+            <i class="fas fa-map-marker-alt animated-icon"></i> 
+            Santiago, Chile
+          </div>
+
+          <!-- Contacto digital -->
+          <a href="https://github.com/ProgKap" target="_blank" class="contacto-item" aria-label="Visitar el perfil de GitHub de Martín Silva">
+            <i class="fab fa-github animated-icon"></i> GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/martín-silva-a5827426a/" target="_blank" class="contacto-item" aria-label="Visitar el perfil de LinkedIn de Martín Silva">
+            <i class="fab fa-linkedin animated-icon"></i> LinkedIn
+          </a>
+
+          <a href="https://www.instagram.com/kapitinn" target="_blank" class="contacto-item" aria-label="Visitar el perfil de Instagram de Martín Silva">
+            <i class="fab fa-instagram animated-icon"></i> Instagram
+          </a>
+
         </div>
       </div>
     </div>
@@ -40,8 +69,11 @@
           <hr />
           <ul>
             <li><i class="fas fa-code animated-icon"></i> Programación en Python, C++, etc.</li>
+
             <li><i class="fas fa-database animated-icon"></i> Bases de Datos</li>
+
             <li><i class="fas fa-network-wired animated-icon"></i> Manejo de OS</li>
+
             <li><i class="fas fa-language animated-icon"></i> Inglés Avanzado</li>
           </ul>
         </section>
@@ -51,7 +83,9 @@
           <hr />
           <ul>
             <li><i class="fas fa-code animated-icon"></i> Proactividad</li>
+
             <li><i class="fas fa-database animated-icon"></i> Creatividad</li>
+
             <li><i class="fas fa-network-wired animated-icon"></i> Tolerancia</li>
           </ul>
         </section>
@@ -59,7 +93,7 @@
 
       <div class="columna-derecha card-section">
         <section class="experiencia">
-          <h3><i class="fas fa-briefcase animated-icon"></i> Experiencia </h3>
+          <h3><i class="fas fa-briefcase animated-icon"></i> Experiencia</h3>
           <hr />
           <p>He trabajado con muchos proyectos de la universidad relacionados a la Programación Orientada a Objetos,
              Orden y Almacenamiento de Datos. Tengo proyectos personales aún por concretar y finalizar relacionados
@@ -69,8 +103,19 @@
         <section class="formacion">
           <h3><i class="fas fa-graduation-cap animated-icon"></i> Formación</h3>
           <hr />
-          <p>Universidad Tecnológica Metropolitana</p>
+          <p>Ingeniería en Informática-Universidad Tecnológica Metropolitana</p>
+
           <p>2023-Presente</p>
+        </section>
+
+        <section class="intereses">
+          <h3><i class="fas fa-brain animated-icon"></i>Cursos</h3>
+          <hr />
+          <ul>
+            <li><i class="fas fa-laptop-code animated-icon"></i> Amazon Web Services</li>
+
+            <li><i class="fas fa-shield-alt animated-icon"></i> CAC CertJoin </li>
+          </ul>
         </section>
 
         <section class="intereses">
@@ -78,21 +123,63 @@
           <hr />
           <ul>
             <li><i class="fas fa-brain animated-icon"></i> Inteligencia Artificial</li>
+
             <li><i class="fas fa-laptop-code animated-icon"></i> Desarrollo de Software</li>
+
             <li><i class="fas fa-shield-alt animated-icon"></i> Ciberseguridad</li>
           </ul>
         </section>
+
+        <section class="idiomas">
+          <h3><i class="fas fa-language animated-icon"></i> Idiomas</h3>
+          <hr />
+        <ul>
+            <li><i class="fas fa-language animated-icon"></i> Español Nativo</li>
+
+            <li><i class="fas fa-language animated-icon"></i> Inglés B2 Intermedio-Avanzado</li>
+      </ul>
+    </section>
       </div>
     </div>
 
     <div class="bloque proyectos-bloque" onclick="window.location.href='proyectos.html'">
       <h2 class="pixel-glitch">CLICK para acceder a mis proyectos</h2>
     </div>
-
-    <div class="bloque proyectos-bloque" onclick="window.location.href='proyectos.html'">
-      <h2 class="pixel-glitch">¿quieres jugar?</h2>
-    </div>
-
   </div>
+
+  <!-- MUSICA-->
+  <button id="btn-musica" onclick="toggleMusica()">🎵 </button>
+
+  <audio id="musicaFondo" preload="auto">
+    <source src="musica/musicaCV.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+  
+  <script>
+    let reproduciendo = false;
+  
+  function toggleMusica() {
+        const audio = document.getElementById('musicaFondo');
+        const boton = document.getElementById('btn-musica');
+        audio.volume = 0.3;
+  
+  if (!reproduciendo) {
+    audio.currentTime = 20;
+    audio.play().then(() => {
+      boton.textContent = '⏸️ Pausar Música';
+      boton.classList.add('activo');
+    }).catch(error => {
+      console.error('Error al intentar reproducir la música:', error);
+    });
+  } else {
+    audio.pause();
+    boton.textContent = '🎵 Play Música';
+    boton.classList.remove('activo');
+  }
+  
+  reproduciendo = !reproduciendo;
+}
+  </script>
+
 </body>
 </html>

@@ -402,3 +402,32 @@ html {
   box-shadow: 0 0 20px #ffcc00, 0 0 30px #ff6600;
   transform: scale(1.2) rotate(2deg);
 }
+
+/* Botones de Zoom */
+.botones-zoom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.botones-zoom button {
+  background: linear-gradient(90deg, #00ff99, #0066ff);
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botones-zoom button:hover {
+  background: linear-gradient(90deg, #0066ff, #00ff99);
+  transform: scale(1.05);
+}

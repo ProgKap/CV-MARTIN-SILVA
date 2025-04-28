@@ -18,9 +18,9 @@
           <!-- Contacto básico -->
         <div class="contacto-horizontal">
           
-          <a href="https://wa.me/56934121222" target="_blank" class="contacto-item cambiar">
+          <a href="https://wa.me/56934129122" target="_blank" class="contacto-item cambiar">
             <i class="fas fa-phone animated-icon"></i> 
-            <span class="texto" data-texto1="+56 9 3412 1222" data-texto2="Contáctame :3"></span>
+            <span class="texto" data-texto1="+56 9 3412 9122" data-texto2="Contáctame :3"></span>
           </a>
 
           <div class="contacto-item">
@@ -56,10 +56,10 @@
           <h3><i class="fas fa-user animated-icon"></i> Perfil Profesional</h3>
           <hr />
           <p>
-            Apasionado por la creación e innovación de nuevas ideas aplicadas a las ciencias de la computación enfatizando la seguridad de los datos.
-            Actualmente tengo 20 años y 
-            soy estudiante de tercer año de Ingeniería en Informática. Soy bastante proactivo y 
-            sé trabajar muy bien colectivamente.
+            Estudiante de tercer año de Ingeniería en Informática, apasionado por la creación e innovación de soluciones tecnológicas, 
+            con especial interés en la seguridad de los datos y la eficiencia de los sistemas. Aporto proactividad, pensamiento crítico 
+            y capacidad de trabajo colaborativo en proyectos de alta exigencia. Mi objetivo es impulsar el desarrollo de plataformas seguras
+            y eficientes que contribuyan al crecimiento y éxito de las organizaciones.
           </p>
         </section>
 
@@ -94,9 +94,10 @@
         <section class="experiencia">
           <h3><i class="fas fa-briefcase animated-icon"></i> Experiencia</h3>
           <hr />
-          <p>He trabajado con muchos proyectos de la universidad relacionados a la Programación Orientada a Objetos,
-             Orden y Almacenamiento de Datos. Tengo proyectos personales aún por concretar y finalizar relacionados
-            a administración y sitios web para PYMES.</p>
+          <p>Participación activa en proyectos universitarios de desarrollo de software aplicando Programación Orientada a Objetos, 
+            diseño de estructuras de datos eficientes y optimización de almacenamiento de información.
+            Desarrollo de proyectos personales enfocados en la creación de plataformas web para la gestión administrativa de PYMES, 
+            aplicando metodologías ágiles y buenas prácticas de seguridad informática.</p>
         </section>
 
         <section class="formacion">
@@ -111,9 +112,9 @@
           <h3><i class="fas fa-brain animated-icon"></i>Cursos</h3>
           <hr />
           <ul>
-            <li><i class="fas fa-laptop-code animated-icon"></i> Amazon Web Services</li>
+            <li><i class="fas fa-laptop-code animated-icon"></i> Amazon Web Services - 2025</li>
 
-            <li><i class="fas fa-shield-alt animated-icon"></i> CAC CertJoin </li>
+            <li><i class="fas fa-shield-alt animated-icon"></i> CAC CertJoin - 2025 </li>
           </ul>
         </section>
 
@@ -175,7 +176,23 @@
           reproduciendo = false;
         }
       }
+      
     </script>
+        <!-- BOTONES DE ZOOM -->
+          <div class="botones-zoom">
+            <button onclick="cambiarZoom(1)">🔎 Aumentar Texto</button>
+            <button onclick="cambiarZoom(-1)">🔍 Disminuir Texto</button>
+          </div>
 
+          <script>
+          let zoom = 100;
+
+          function cambiarZoom(valor) {
+            zoom += valor * 10;
+            if (zoom < 50) zoom = 50;
+            if (zoom > 200) zoom = 200;
+            document.documentElement.style.fontSize = zoom + '%';
+          }
+    </script>
 </body>
 </html>

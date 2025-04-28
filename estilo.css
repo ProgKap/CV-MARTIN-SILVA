@@ -406,7 +406,7 @@ html {
 /* Botones de Zoom */
 .botones-zoom {
   position: fixed;
-  bottom: 100px; 
+  bottom: 100px; /* Espacio para no chocar con el botón de música */
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -430,4 +430,17 @@ html {
 .botones-zoom button:hover {
   background: linear-gradient(90deg, #0066ff, #00ff99);
   transform: scale(1.05);
+}
+
+/* Responsive para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+  .botones-zoom {
+    bottom: 80px; 
+    right: 10px; 
+  }
+
+  .botones-zoom button {
+    font-size: 1rem; 
+    padding: 8px 12px; 
+  }
 }

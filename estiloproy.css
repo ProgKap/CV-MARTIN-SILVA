@@ -2,11 +2,23 @@
 
 body {
   background: url('img/fondoproy.gif') no-repeat center center fixed;
+  background-color: #ffffff;
   background-size: cover;
+  opacity: 50;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 2rem;
   text-align: center;
+}
+
+.bloque-descripcion {
+  background-color: rgba(35, 168, 1, 0.562); 
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: #000000;
+  font-family: 'Fira Code','Courier New';
 }
 
 .proyectos-container {
@@ -29,13 +41,22 @@ body {
 .pixel-glitch-verde {
   font-family: 'Courier New', monospace;
   font-size: 1.5rem;
-  animation: glitch-fire-verde 2s infinite;
+  animation: glitch-fire-verde 10s infinite;
 }
 
 @keyframes glitch-fire-verde {
-  0%, 100% { color: #00ff66; text-shadow: 0 0 6px #00ff66; }
-  33%  { color: #66ffcc; text-shadow: 0 0 6px #66ffcc; }
-  66%  { color: #33ff99; text-shadow: 0 0 6px #33ff99; }
+  0%, 100% {
+    color: #00ff99;
+    text-shadow: 0 0 6px #00ffaa;
+  }
+  33% {
+    color: #66ffcc;
+    text-shadow: 0 0 6px #33ffcc;
+  }
+  66% {
+    color: #00cc66;
+    text-shadow: 0 0 6px #009966;
+  }
 }
 
 .galeria-container {
@@ -187,6 +208,35 @@ html {
 
 body {
   font-size: 1rem;
+}
+
+/* Botones de Zoom */
+.botones-zoom {
+  position: fixed;
+  bottom: 100px; /* Espacio para no chocar con el botón de música */
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.botones-zoom button {
+  background: linear-gradient(90deg, #155e03, #000000);
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botones-zoom button:hover {
+  background: linear-gradient(90deg, #155e03, #000000);
+  transform: scale(1.05);
 }
 
 /* RESPONSIVE */

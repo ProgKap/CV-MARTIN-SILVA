@@ -12,13 +12,20 @@ body {
 }
 
 .bloque-descripcion {
-  background-color: rgba(35, 168, 1, 0.562); 
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  color: #000000;
-  font-family: 'Fira Code','Courier New';
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00ff00;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.fecha-proyecto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .proyectos-container {
@@ -29,7 +36,6 @@ body {
 }
 
 .columna-proyecto {
-  max-width: 600px;
   width: 100%;
 }
 

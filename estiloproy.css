@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
-  background: url('img/fondoproy.gif') no-repeat center center fixed;
+  background: url('img/fondoproy.png') no-repeat center center fixed;
   background-color: #ffffff;
   background-size: cover;
   opacity: 50;
@@ -16,8 +16,8 @@ body {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 10px;
-  box-shadow: 0 0 8px #00ff00;
-  color: #00ff00;
+  box-shadow: 0 0 8px #000000;
+  color: #e2d9d9;
   font-family: 'Courier New', monospace;
 }
 
@@ -50,26 +50,11 @@ body {
   animation: glitch-fire-verde 10s infinite;
 }
 
-@keyframes glitch-fire-verde {
-  0%, 100% {
-    color: #00ff99;
-    text-shadow: 0 0 6px #00ffaa;
-  }
-  33% {
-    color: #66ffcc;
-    text-shadow: 0 0 6px #33ffcc;
-  }
-  66% {
-    color: #00cc66;
-    text-shadow: 0 0 6px #009966;
-  }
-}
-
 .galeria-container {
     position: relative;
     background: #0d0f1a;
     border-radius: 1rem;
-    box-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66 inset;
+    box-shadow: 0 0 10px #0b0149, 0 0 20px #250061 inset;
     padding: 1rem;
     max-width: 400px;
     margin: 2rem auto;
@@ -113,10 +98,10 @@ input[type="radio"] {
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .proyectos-bloque {
-  background: linear-gradient(-45deg, #177514, #0fff23, #a0fc7c, #1c4412);
+  background: linear-gradient(-45deg, #370144, #ffffff, #0a0066, #110031);
   background-size: 300% 300%;
   background-position: 0% 50%;
-  animation: levitarFND 5s ease-in-out infinite, slideBackground 2s ease infinite;
+  animation: levitarFND 10s ease-in-out infinite, slideBackground 10s ease infinite;
   padding: 2.5rem 3rem;
   border-radius: 1rem;
   max-width: 80%;
@@ -140,7 +125,7 @@ input[type="radio"] {
 .proyectos-bloque:hover {
   transform: scale(1.05) rotate(-1deg);
   background-position: 100% 50%;
-  box-shadow: 0 12px 30px rgba(0, 255, 100, 0.7);
+  box-shadow: 0 12px 30px rgba(62, 0, 161, 0.7);
 }
 
 
@@ -197,7 +182,7 @@ input[type="radio"] {
 }
 
 .manual-btn {
-  border: 2px solid #00ff66;
+  border: 2px solid #360144;
   border-radius: 50%;
   padding: 6px;
   cursor: pointer;
@@ -205,7 +190,7 @@ input[type="radio"] {
 }
 
 .manual-btn:hover {
-  background: #00ff66;
+  background: #370144;
 }
 
 html {
@@ -228,7 +213,7 @@ body {
 }
 
 .botones-zoom button {
-  background: linear-gradient(90deg, #155e03, #000000);
+  background: linear-gradient(90deg, #370144, #ea00ff);
   color: white;
   font-family: 'VT323', monospace;
   font-size: 1.3rem;
@@ -241,7 +226,7 @@ body {
 }
 
 .botones-zoom button:hover {
-  background: linear-gradient(90deg, #155e03, #000000);
+  background: linear-gradient(90deg, #370144, #ea00ff);
   transform: scale(1.05);
 }
 
@@ -305,7 +290,7 @@ body {
 
   .galeria-container {
     padding: 0.5rem;
-    box-shadow: 0 0 6px #00ff66, 0 0 12px #00ff66 inset;
+    box-shadow: 0 0 6px #340185, 0 0 12px #ff04f2 inset;
   }
 }
 
@@ -320,3 +305,18 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+@keyframes glitch-fire-verde {
+  0%, 100% {
+    color: #cc00ff;
+    text-shadow: 0 0 6px #b700ff;
+  }
+  33% {
+    color: #90079c;
+    text-shadow: 0 0 6px #6430b8;
+  }
+  66% {
+    color: #0b00df;
+    text-shadow: 0 0 6px #000000;
+  }
+}  
